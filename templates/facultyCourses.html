@@ -48,9 +48,38 @@
           
     
           <div class="d-flex align-items-center">
-            <a class="text-reset me-3" href="#">
-              <i class="fa-solid fa-plus"></i>
-            </a>
+            <button type="button" class="btn btn-primary btn-floating btn-md me-3" data-mdb-toggle="modal" data-mdb-target="#myModal">
+              <i class="fa-solid fa-plus pe-none"></i>
+            </button>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="course-title" class="col-form-label">Course Title</label>
+                    <input type="text" class="form-control" id="course-title" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="course-code" class="col-form-label">Course Code</label>
+                    <input type="text" class="form-control" id="course-code" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+      </div>
             <button type="button" class="btn btn-primary me-3">
                 LOGOUT
             </button>
@@ -64,7 +93,8 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">COMPUTER NETWORKS</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">Semester : 5th</p>
+                      <p class="card-text">Course Code : 20CS5PCCON</p>
                       <a href="{% url 'facultySections' %}" class="btn btn-primary">View Sections</a>
                     </div>
                   </div>
@@ -73,7 +103,8 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">SOFTWARE ENGINEERING</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">Semester : 5th</p>
+                      <p class="card-text">Course Code : 20CS5PCSEG</p>
                       <a href="{% url 'facultySections' %}" class="btn btn-primary">View Sections</a>
                     </div>
                   </div>

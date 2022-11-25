@@ -48,9 +48,38 @@
           
     
           <div class="d-flex align-items-center">
-            <a class="text-reset me-3" href="#">
-              <i class="fa-solid fa-plus"></i>
-            </a>
+            <button type="button" class="btn btn-primary btn-floating btn-md me-3" data-mdb-toggle="modal" data-mdb-target="#myModal">
+              <i class="fa-solid fa-plus pe-none"></i>
+            </button>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Section</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="course-title" class="col-form-label">Section Name</label>
+                    <input type="text" class="form-control" id="course-title" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="course-code" class="col-form-label">Upload Class List</label>
+                    <input type="file" class="form-control" id="course-code" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+      </div>
             <button type="button" class="btn btn-primary me-3">
                 LOGOUT
             </button>
@@ -64,7 +93,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">5A</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">Number of Students : 58</p>
                       <a href="#" class="btn btn-primary">Mark Attendance</a>
                     </div>
                   </div>
@@ -73,7 +102,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">5B</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">Number of Students : 60</p>
                       <a href="#" class="btn btn-primary">Mark Attendance</a>
                     </div>
                   </div>
