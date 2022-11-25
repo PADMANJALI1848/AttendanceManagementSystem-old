@@ -10,8 +10,8 @@ def home(request ,*args , **kwargs):
 def SignUp(request):
     return render(request, 'Signup.html', {})
 
-def StudentLogin(request):
-    return render(request, 'studentlogin.html', {})
+def Login(request):
+    return render(request, 'login.html', {})
 
 def StudentDashboard(request):
     return render(request, 'studentdashboard.html', {})

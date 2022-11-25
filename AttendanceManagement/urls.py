@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from users.views import home
 from users.views import SignUp
-from users.views import StudentLogin
+from users.views import Login
 from users.views import StudentDashboard
 from users.views import StudentCourse
 
 urlpatterns = [
     path('', home, name='home'),
     path('signup/', SignUp, name='signup'),
-    path('studentlogin/',StudentLogin , name='studentlogin'),
+    path('login/',Login , name='login'),
     path('studentdashboard/',StudentDashboard , name='studentdashboard'),
     path('studentcourse/',StudentCourse , name='studentcourse'),
     path('admin/', admin.site.urls),

@@ -33,52 +33,143 @@
           
                           <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">SIGN UP</p>
           
-                          <form class="mx-1 mx-md-4">
-          
-                            <div class="d-flex flex-row align-items-center mb-4">
-                              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                              <div class="form-outline flex-fill mb-0">
-                                <input type="text" id="form3Example1c" class="form-control" />
-                                <label class="form-label" for="form3Example1c">Your Name</label>
-                              </div>
-                            </div>
-          
-                            <div class="d-flex flex-row align-items-center mb-4">
-                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                              <div class="form-outline flex-fill mb-0">
-                                <input type="email" id="form3Example3c" class="form-control" />
-                                <label class="form-label" for="form3Example3c">Your Email</label>
-                              </div>
-                            </div>
-          
-                            <div class="d-flex flex-row align-items-center mb-4">
-                              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                              <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="form3Example4c" class="form-control" />
-                                <label class="form-label" for="form3Example4c">Password</label>
-                              </div>
-                            </div>
-          
-                            <div class="d-flex flex-row align-items-center mb-4">
-                              <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                              <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="form3Example4cd" class="form-control" />
-                                <label class="form-label" for="form3Example4cd">Confirm your password</label>
-                              </div>
-                            </div>
-          
-                            <div class="form-check d-flex justify-content-center mb-5">
-                              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                              <label class="form-check-label" for="form2Example3">
-                                I agree all statements in <a href="#!">Terms of service</a>
-                              </label>
-                            </div>
-          
-                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                              <button type="button" class="btn btn-primary btn-lg">Register</button>
-                            </div>
-          
-                          </form>
+                                  <!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link active"
+      id="tab-login"
+      data-mdb-toggle="pill"
+      href="#pills-login"
+      role="tab"
+      aria-controls="pills-login"
+      aria-selected="true"
+      >STUDENT</a
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="tab-register"
+      data-mdb-toggle="pill"
+      href="#pills-register"
+      role="tab"
+      aria-controls="pills-register"
+      aria-selected="false"
+      >FACULTY</a
+    >
+  </li>
+</ul>
+<!-- Pills navs -->
+
+<!-- Pills content -->
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+    <form>
+
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerName" class="form-control" />
+        <label class="form-label" for="registerName">Username [ USN ]</label>
+      </div>
+
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerUsername" class="form-control" />
+        <label class="form-label" for="registerUsername">Name</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" />
+        <label class="form-label" for="registerEmail">Email</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" />
+        <label class="form-label" for="registerPassword">Password</label>
+      </div>
+
+      <!-- Repeat Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerRepeatPassword" class="form-control" />
+        <label class="form-label" for="registerRepeatPassword">Confirm password</label>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input
+          class="form-check-input me-2"
+          type="checkbox"
+          value=""
+          id="registerCheck"
+          checked
+          aria-describedby="registerCheckHelpText"
+        />
+        <label class="form-check-label" for="registerCheck">
+          I have read and agree to the terms
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+    </form>
+  </div>
+  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+    <form>
+
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerName" class="form-control" />
+        <label class="form-label" for="registerName">UserName</label>
+      </div>
+
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerUsername" class="form-control" />
+        <label class="form-label" for="registerUsername">Name</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" />
+        <label class="form-label" for="registerEmail">Email</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" />
+        <label class="form-label" for="registerPassword">Password</label>
+      </div>
+
+      <!-- Repeat Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerRepeatPassword" class="form-control" />
+        <label class="form-label" for="registerRepeatPassword">Confirm password</label>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input
+          class="form-check-input me-2"
+          type="checkbox"
+          value=""
+          id="registerCheck"
+          checked
+          aria-describedby="registerCheckHelpText"
+        />
+        <label class="form-check-label" for="registerCheck">
+          I have read and agree to the terms
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+    </form>
+  </div>
+</div>
+<!-- Pills content -->
           
                         </div>
                         <div class="col-md-10 col-lg-4 col-xl-5 d-flex align-items-center order-1 order-lg-2">
