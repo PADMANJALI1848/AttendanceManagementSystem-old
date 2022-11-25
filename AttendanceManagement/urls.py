@@ -23,6 +23,8 @@ urlpatterns = [
     path('signup/',signUp, name='signup'),
     path('facultycourses/', facultyCourses , name='facultyCourses'),
     path('facultysections/',facultySections , name='facultySections'),
+    path('facultyattendance/',facultyAttendance , name='facultyAttendance'),
+
     path('admin/', admin.site.urls),
 
     path('reset_password/', authViews.PasswordResetView.as_view(template_name="password_reset.html") , name="reset_password"),

@@ -16,3 +16,5 @@ def facultyCourses(request):
 def facultySections(request):
     return render(request , 'facultySections.html')
 
+def facultyAttendance(request):
+    return render(request,'facultyAttendance.html')
