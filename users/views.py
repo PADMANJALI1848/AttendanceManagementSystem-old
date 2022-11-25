@@ -1,11 +1,18 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
-def home_view(request ,*args , **kwargs):
+def home(request ,*args , **kwargs):
     print(args,kwargs)
-    print(request.user)
     return render(request , "home.html",{})
 
-def SignUp_view(request):
-    return render(request, 'Signup.html', {})
+def signUp(request):
+    return render(request,'SignUp.html', {})
+
+def facultyCourses(request):
+    return render(request , 'facultyCourses.html')
+
+def facultySections(request):
+    return render(request , 'facultySections.html')
+
