@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>CSE AMS</title>
+		  <!-- Font Awesome -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+          <!-- Google Fonts -->
+         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+          <!-- MDB -->
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet"/>
+  
+        <!-- MDB -->
+         <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+          
+	</head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+    body{
+      font-family: 'Urbanist', sans-serif !important;
+    }
+  </style>
+	<body style="background: #f5f8fa;font-family: 'Roboto', sans-serif;">
+    {% include 'navbar.html' %}
+    <section class="vh-100" style="background-color: #eee;">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <p class="text-left h4 fw-bold mb-4 mx-1 mx-md-2 mt-2">Dashboard</p>
+                  <table class="table align-middle mb-0 bg-white">
+                   <thead class="bg-light">
+                    <tr>
+                     <th>Course Title</th>
+                     <th>Faculty Handle</th>
+                     <th>Status</th>
+                     <th>Course Code</th>
+                     <th>Credits</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    <tr>
+                   <td>
+                    <div class="d-flex align-items-center">
+                  <div class="ms-3">
+                  <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Computer Networks</a></p>
+                  </div>
+                 </div>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Prof. Rekha G S</p>
+                 </td>
+                 <td>
+                 <span class="badge badge-success rounded-pill d-inline">Elligible</span>
+                 </td>
+                <td>20CS5PCCON</td>
+               <td>
+                <button
+                type="button"
+                class="btn btn-link btn-rounded btn-sm fw-bold"
+                data-mdb-ripple-color="dark"
+                >4
+                </button>
+               </td>
+            </tr>
+             <tr>
+               <td>
+                   <div class="d-flex align-items-center">
+                 <div class="ms-3">
+                 <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Artificial Intelligence</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">Prof. Antara Roy</p>
+            </td>
+            <td>
+              <span class="badge badge-warning rounded-pill d-inline"
+                    >Not-Elligible</span
+                >
+            </td>
+            <td>20CS5PCAIP</td>
+            <td>
+              <button
+                      type="button"
+                      class="btn btn-link btn-rounded btn-sm fw-bold"
+                      data-mdb-ripple-color="dark"
+                      >
+                4
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="d-flex align-items-center">
+              <div class="ms-3">
+              <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Software Engineering</p>
+             </div>
+           </div>
+         </td>
+         <td>
+           <p class="fw-normal mb-1">Prof. Sonica Sharma</p>
+         </td>
+         <td>
+           <span class="badge badge-success rounded-pill d-inline"
+                 >Elligible</span
+             >
+         </td>
+         <td>20CS5PCSEG</td>
+         <td>
+           <button
+                   type="button"
+                   class="btn btn-link btn-rounded btn-sm fw-bold"
+                   data-mdb-ripple-color="dark"
+                   >
+             3
+           </button>
+         </td>
+       </tr>
+        <tr>
+            <td>
+                   <div class="d-flex align-items-center">
+                 <div class="ms-3">
+                    <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Advanced Data Structures</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">Dr. Rajeshwari B S</p>
+            </td>
+            <td>
+              <span class="badge badge-success rounded-pill d-inline"
+                    >Elligible</span
+                >
+            </td>
+            <td>20CS5PEADS</td>
+            <td>
+              <button
+                      type="button"
+                      class="btn btn-link btn-rounded btn-sm fw-bold"
+                      data-mdb-ripple-color="dark"
+                      >
+                4
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Advanced Algorithms</p>
+             </div>
+           </div>
+         </td>
+         <td>
+           <p class="fw-normal mb-1">Prof. Syed Akram</p>
+         </td>
+         <td>
+           <span class="badge badge-warning rounded-pill d-inline"
+                 >Not-Elligible</span
+             >
+         </td>
+         <td>20CS5PEAAG</td>
+         <td>
+           <button
+                   type="button"
+                   class="btn btn-link btn-rounded btn-sm fw-bold"
+                   data-mdb-ripple-color="dark"
+                   >
+             3
+           </button>
+         </td>
+       </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                    <p class="fw-bold mb-1"><a class="text-black" href="{% url "studentcourse" %}">Unix Shell and System Programming</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">Dr. Pallavi G B</p>
+            </td>
+            <td>
+              <span class="badge badge-success rounded-pill d-inline">Elligible</span>
+            </td>
+            <td>20CS5PCUSP</td>
+            <td>
+              <button
+                      type="button"
+                      class="btn btn-link btn-rounded btn-sm fw-bold"
+                      data-mdb-ripple-color="dark"
+                      >
+                4
+              </button>
+               </td>
+               </tr>
+               </tbody>
+              </table>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     {% include 'footor.html' %}  
+	</body>
+</html>
