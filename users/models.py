@@ -7,3 +7,4 @@ class Users(models.Model):
     email = models.TextField(max_length=120)
     password= models.TextField(max_length=120)
     confirmpassword= models.TextField(max_length=120)
+    types = models.TextField(max_length=1)

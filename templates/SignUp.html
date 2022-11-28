@@ -60,40 +60,43 @@
     >
   </li>
 </ul>
+
+{% comment %} 1 - type = student {% endcomment %}
+{% comment %} 2 - type = faculty {% endcomment %}
 <!-- Pills navs -->
 
 <!-- Pills content -->
 <div class="tab-content">
   <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form>
+    <form method="POST">{% csrf_token %}
 
       <!-- Name input -->
       <div class="form-outline mb-4">
-        <input type="text" id="registerName" class="form-control" />
+        <input type="text" name="username" id="registerName" class="form-control" />
         <label class="form-label" for="registerName">Username [ USN ]</label>
       </div>
 
       <!-- Username input -->
       <div class="form-outline mb-4">
-        <input type="text" id="registerUsername" class="form-control" />
+        <input type="text" name="name" id="registerUsername" class="form-control" />
         <label class="form-label" for="registerUsername">Name</label>
       </div>
 
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="registerEmail" class="form-control" />
+        <input type="email" name="email" id="registerEmail" class="form-control" />
         <label class="form-label" for="registerEmail">Email</label>
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="registerPassword" class="form-control" />
+        <input type="password" name="password" id="registerPassword" class="form-control" />
         <label class="form-label" for="registerPassword">Password</label>
       </div>
 
       <!-- Repeat Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" class="form-control" />
+        <input type="password" name="confirmpassword" id="registerRepeatPassword" class="form-control" />
         <label class="form-label" for="registerRepeatPassword">Confirm password</label>
       </div>
 
@@ -111,41 +114,43 @@
           I have read and agree to the terms
         </label>
       </div>
+      <input type = "hidden" name = "types" value = "1" />
 
       <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+      {% comment %} <button type="submit" class="btn btn-primary btn-block mb-3"> {% endcomment %}
+        <a href="{% url "login" %}" class="btn btn-primary btn-block mb-3">Sign Up</a>
     </form>
   </div>
   <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-    <form>
+    <form method="POST">{% csrf_token %}
 
       <!-- Name input -->
       <div class="form-outline mb-4">
-        <input type="text" id="registerName" class="form-control" />
+        <input type="text" name="username" id="registerName" class="form-control" />
         <label class="form-label" for="registerName">UserName</label>
       </div>
 
       <!-- Username input -->
       <div class="form-outline mb-4">
-        <input type="text" id="registerUsername" class="form-control" />
+        <input type="text" name="name" id="registerUsername" class="form-control" />
         <label class="form-label" for="registerUsername">Name</label>
       </div>
 
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="registerEmail" class="form-control" />
+        <input type="email" name="email" id="registerEmail" class="form-control" />
         <label class="form-label" for="registerEmail">Email</label>
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="registerPassword" class="form-control" />
+        <input type="password" name="password" id="registerPassword" class="form-control" />
         <label class="form-label" for="registerPassword">Password</label>
       </div>
 
       <!-- Repeat Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" class="form-control" />
+        <input type="password" name="confirmpassword" id="registerRepeatPassword" class="form-control" />
         <label class="form-label" for="registerRepeatPassword">Confirm password</label>
       </div>
 
@@ -163,9 +168,11 @@
           I have read and agree to the terms
         </label>
       </div>
+      <input type = "hidden" name = "types" value = "2" />
 
       <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+      {% comment %} <button type="submit" class="btn btn-primary btn-block mb-3"> {% endcomment %}
+        <a href="{% url "login" %}" class="btn btn-primary btn-block mb-3">Sign Up</a>
     </form>
   </div>
 </div>
