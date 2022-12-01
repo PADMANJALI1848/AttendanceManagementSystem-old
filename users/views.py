@@ -12,33 +12,28 @@ def home(request ,*args , **kwargs):
     return render(request , "home.html",{})
 
 def SignUp(request):
-    form=Userform(request.POST)
-    if form.is_valid():
-        form.save()
-        form=Userform()
-
-    context={
-        'form': form
-    }
-    return render(request , "SignUp.html",context)
-	
+    if request.method == 'POST':
+        form=Userform(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = Userform()
+    return render(request , "SignUp.html",{ 'form': form})
+	 
 
 def Login(request):
-	# if request.method == 'POST':
-	# 	username = request.POST['username']
-	# 	password = request.POST['password']
-	# 	user = authenticate(request, username = username, password = password)
-    #     if user is not None:
-	# 		form = login(request, user)
-    #         if user.types == 1:
-    #             return render(request , "studentdashboard.html",{})
-    #         else:
-    #             return render(request , "facultyCourses.html",)
-	# 		# messages.success(request, ' welcome {username} !!')
-	# 	else:
-	# 		messages.info(request, 'account done not exit plz sign in')
-	# form = AuthenticationForm()
-	return render(request, 'login.html', {})
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request , username=username , password=password)
+        if user is not None:
+            form=login(request, user)
+            return redirect('studentdashboard')
+        else:
+            messages.info(request,f'Account Does not exit plz sign in')
+    form=AuthenticationForm()
+    return render(request, 'login.html', { 'form': form})
 
 
 def StudentDashboard(request):
@@ -55,3 +50,4 @@ def facultySections(request):
 
 def facultyAttendance(request):
     return render(request,'facultyAttendance.html')
+

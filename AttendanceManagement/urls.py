@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from users.views import *
 from django.contrib.auth import views as authViews
-
+ 
 urlpatterns = [
     path('', home, name='home'),
     path('signup/', SignUp, name='signup'),
